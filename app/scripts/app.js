@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('yeomanAngularBootstrapAppApp', ['ngRoute'])
-  .config(function ($routeProvider) {
+angular.module('yeomanAngularBootstrapApp', ['ngRoute'])
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -10,4 +10,5 @@ angular.module('yeomanAngularBootstrapAppApp', ['ngRoute'])
       .otherwise({
         redirectTo: '/'
       });
+    $locationProvider.html5Mode(true)
   });

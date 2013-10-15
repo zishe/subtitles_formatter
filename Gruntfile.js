@@ -6,6 +6,15 @@ var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
 
+// https://github.com/yeoman/generator-angular/issues/393
+// "grunt server" Interferes with page reloads
+// var fs = require('fs')
+
+// https://gist.github.com/zishe/6925726
+// Using grunt and Angular with pushstate support!
+var modRewrite = require('connect-modrewrite');
+
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -76,11 +85,19 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
+          hostname: '0.0.0.0',
           middleware: function (connect) {
             return [
+              modRewrite([
+                '!(\\..+)$ / [L]'
+              ]),
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, yeomanConfig.app)
+              // for angular apps, we send 404s back to the application
+              // function(req, res){
+              //   res.end(fs.readFileSync(__dirname+'/app/index.html', {encoding:'utf8'}));
+              // }
             ];
           }
         }

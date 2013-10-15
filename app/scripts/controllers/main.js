@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yeomanAngularBootstrapAppApp')
+angular.module('yeomanAngularBootstrapApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

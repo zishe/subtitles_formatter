@@ -1,0 +1,19 @@
+{
+  "name": "yeomanAngularBootstrapApp",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "*",
+    "json3": "*",
+    "jquery": "*",
+    "bootstrap-sass": "*",
+    "es5-shim": "*",
+    "angular-route": ">=1.2.0-rc",
+    "angular-resource": ">=1.2.0-rc",
+    "angular-cookies": ">=1.2.0-rc",
+    "angular-sanitize": ">=1.2.0-rc"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.2.0-rc",
+    "angular-scenario": ">=1.2.0-rc"
+  }
+}

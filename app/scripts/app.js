@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yeomanAngularBootstrapAppApp', [])
+angular.module('yeomanAngularBootstrapAppApp', ['ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

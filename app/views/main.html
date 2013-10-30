@@ -1,9 +1,42 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
+<h2 class="title" style="margin-left: 20px;">Subs Formatter</h2>
+
+<div class="raw">
+  <div class="col-md-4">
+    <textarea ng-model="src" name="source" id="src" ng-change="convert()"></textarea>
+
+    <div class="pull-left">
+      <p style="margin-top: 20px;">
+        1<br/>
+        00:01:43,524 --> 00:01:47,676 <br/>
+        Sleek, Sophisticated, Seductive, <br/>
+        <br/>
+        2 <br/>
+        00:01:47,884 --> 00:01:51,878 <br/>
+        The new Millennium Edition <br/>
+        Crown Royal funeral coach, <br/>
+        <br/>
+        3 <br/>
+        00:01:52,085 --> 00:01:58,320 <br/>
+        Because your loved one deserves <br/>
+        the very best in style and comfort, <br/>
+        ...<br/>
+      </p>
+    </div>
+  </div>
+  <!--<div class="col-md-1">-->
+    <!--<button class="btn btn-primary" ng-click="convert()"><span class="glyphicon glyphicon-forward"></span></button>-->
+  <!--</div>-->
+  <div class="col-md-4">
+    <textarea ng-model="res" name="result" id="rslt"></textarea>
+    <div class="pull-left">
+      <p style="margin-top: 35px;">
+        Sleek, Sophisticated, Seductive, <br/>
+        The new Millennium Edition <br/>
+        Crown Royal funeral coach, <br/>
+        Because your loved one deserves <br/>
+        the very best in style and comfort, <br/>
+        ...<br/>
+      </p>
+    </div>
+  </div>
 </div>
